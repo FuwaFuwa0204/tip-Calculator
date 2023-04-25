@@ -105,7 +105,7 @@ fun TipTimeScreen() {
 
 @Composable
 //textfield가 여러개이기때문에 라벨도 인수로!
-fun EditNumberField(@StringRes label:Int,
+fun EditNumberField(label:Int,
                     keyboardOptions: KeyboardOptions,
                     keyboardActions: KeyboardActions,
                     value:String,
@@ -125,7 +125,7 @@ fun EditNumberField(@StringRes label:Int,
     )
 }
 
-private fun calculateTip(amount:Double,tipPercent:Double = 15.0, roundUp: Boolean): String{
+internal fun calculateTip(amount:Double,tipPercent:Double = 15.0, roundUp: Boolean): String{
 
     var tip = tipPercent / 100 * amount
     //화폐단위 표시
